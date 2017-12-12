@@ -1,0 +1,246 @@
+dn: dc=sox,dc=com
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: sox.com
+dc: sox
+structuralObjectClass: organization
+entryUUID: e48658dc-6a09-1037-9b76-25bdca72c98b
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110351Z
+entryCSN: 20171130110351.534536Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110351Z
+
+dn: cn=admin,dc=sox,dc=com
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword:: e1NTSEF9UWNtVkgwWkNubFB4dzJoU1ExbzhuZE50emo2dkg4R0E=
+structuralObjectClass: organizationalRole
+entryUUID: e486961c-6a09-1037-9b77-25bdca72c98b
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110351Z
+entryCSN: 20171130110351.536146Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110351Z
+
+dn: ou=People,dc=sox,dc=com
+objectClass: organizationalUnit
+ou: People
+structuralObjectClass: organizationalUnit
+entryUUID: edb43bcc-6a09-1037-9f61-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110406Z
+entryCSN: 20171130110406.934776Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110406Z
+
+dn: ou=Groups,dc=sox,dc=com
+objectClass: organizationalUnit
+ou: Groups
+structuralObjectClass: organizationalUnit
+entryUUID: edb93dca-6a09-1037-9f62-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110406Z
+entryCSN: 20171130110406.967611Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110406Z
+
+dn: cn=usuarios,ou=Groups,dc=sox,dc=com
+objectClass: posixGroup
+cn: usuarios
+gidNumber: 5000
+structuralObjectClass: posixGroup
+entryUUID: f645d9ee-6a09-1037-9f63-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110421Z
+entryCSN: 20171130110421.310885Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110421Z
+
+dn: uid=usuario1,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: usuario1
+sn: usuario1
+givenName: usuario1
+cn: usuario 1
+displayName: usuario1
+uidNumber: 10000
+gidNumber: 5000
+userPassword:: e1NTSEF9S0xDYytEakRRcTRxYUJZdjdyQmtPelZKTVd2aHBoU0c=
+gecos: Usuari usuario1
+loginShell: /bin/bash
+homeDirectory: /home/usuario1
+structuralObjectClass: inetOrgPerson
+entryUUID: ff839a1e-6a09-1037-9f64-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110436Z
+entryCSN: 20171130110436.815070Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110436Z
+
+dn: uid=usuario2,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: usuario2
+sn: usuario2
+givenName: usuario2
+cn: usuario 2
+displayName: usuario2
+uidNumber: 10001
+gidNumber: 5000
+userPassword:: e1NTSEF9SExhNEsvanJxNGY5RWhrTDF5d0Z5a21FQUpKTWxIR3Q=
+gecos: Usuari usuario2
+loginShell: /bin/bash
+homeDirectory: /home/usuario2
+structuralObjectClass: inetOrgPerson
+entryUUID: ff8414c6-6a09-1037-9f65-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110436Z
+entryCSN: 20171130110436.818211Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110436Z
+
+dn: uid=usuario3,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: usuario3
+sn: usuario3
+givenName: usuario3
+cn: usuario 3
+displayName: usuario3
+uidNumber: 10002
+gidNumber: 5000
+userPassword:: e1NTSEF9dy94ZU40TEdrU1VZQzEvVW1OTGpoWkg0aWl4TjBoQ0Q=
+gecos: Usuari usuario3
+loginShell: /bin/bash
+homeDirectory: /home/usuario3
+structuralObjectClass: inetOrgPerson
+entryUUID: ff8466e2-6a09-1037-9f66-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110436Z
+entryCSN: 20171130110436.820313Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110436Z
+
+dn: uid=usuario4,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: usuario4
+sn: usuario4
+givenName: usuario4
+cn: usuario 4
+displayName: usuario4
+uidNumber: 10003
+gidNumber: 5000
+userPassword:: e1NTSEF9WXNXU2lRN3daY0RyZnpJcTNrVlZKWkIxN0pMcWJGWkg=
+gecos: Usuari usuario4
+loginShell: /bin/bash
+homeDirectory: /home/usuario4
+structuralObjectClass: inetOrgPerson
+entryUUID: ff84c790-6a09-1037-9f67-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110436Z
+entryCSN: 20171130110436.822788Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110436Z
+
+dn: uid=usuario5,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: usuario5
+sn: usuario5
+givenName: usuario5
+cn: usuario 5
+displayName: usuario5
+uidNumber: 10004
+gidNumber: 5000
+userPassword:: e1NTSEF9YUFMZTUrZ2pUTjUwYVpzRytiSUl6WHhjUzZhVzFZOFg=
+gecos: Usuari usuario5
+loginShell: /bin/bash
+homeDirectory: /home/usuario5
+structuralObjectClass: inetOrgPerson
+entryUUID: ff85282a-6a09-1037-9f68-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110436Z
+entryCSN: 20171130110436.825260Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110436Z
+
+dn: uid=kirito1,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: kirito1
+sn: kirito1
+givenName: kirito1
+cn: kirito 1
+displayName: kirito1
+uidNumber: 10005
+gidNumber: 5000
+userPassword:: e1NTSEF9ZkliSGQ5TkQ1bnFqNDJsV295RENKdEF4S1hudnByM3Q=
+gecos: Usuari kirito1
+loginShell: /bin/bash
+homeDirectory: /home/kirito1
+structuralObjectClass: inetOrgPerson
+entryUUID: 07da969a-6a0a-1037-9f69-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110450Z
+entryCSN: 20171130110450.806916Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110450Z
+
+dn: uid=asdf1,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: asdf1
+sn: asdf1
+givenName: asdf1
+cn: asdf 1
+displayName: asdf1
+uidNumber: 10006
+gidNumber: 5000
+userPassword:: e1NTSEF9WlBGSUptOVdpMDJXZ3dkODIvTlJLNzRkc0V1QXV0VGQ=
+gecos: asdf1
+loginShell: /bin/bash
+homeDirectory: /home/asdf1
+structuralObjectClass: inetOrgPerson
+entryUUID: 4480bd5e-6a0a-1037-9f6a-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110632Z
+entryCSN: 20171130110632.559103Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110632Z
+
+dn: uid=asdf2,ou=People,dc=sox,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: asdf2
+sn: asdf2
+givenName: asdf2
+cn: asdf 2
+displayName: asdf2
+uidNumber: 10007
+gidNumber: 5000
+userPassword:: e1NTSEF9UmllU0FvaXJLc2ZNcjFXRDErUGF3ZWV1bThsVzBkYkc=
+gecos: asdf2
+loginShell: /bin/bash
+homeDirectory: /home/asdf2
+structuralObjectClass: inetOrgPerson
+entryUUID: 4484a4b4-6a0a-1037-9f6b-11810dd52bad
+creatorsName: cn=admin,dc=sox,dc=com
+createTimestamp: 20171130110632Z
+entryCSN: 20171130110632.584685Z#000000#000#000000
+modifiersName: cn=admin,dc=sox,dc=com
+modifyTimestamp: 20171130110632Z
+

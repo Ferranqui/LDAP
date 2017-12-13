@@ -13,8 +13,8 @@ clear
 echo "# /etc/nsswitch.conf
 #
 # Example configuration of GNU Name Service Switch functionality.
-# If you have the `glibc-doc-reference' and `info' packages installed, try:
-# `info libc "Name Service Switch"' for information about this file.
+# If you have the -glibc-doc-reference- and -info- packages installed, try:
+# -info libc -Name Service Switch- for information about this file.
 
 passwd:         compat ldap
 group:          compat ldap
@@ -47,4 +47,4 @@ read
 
 nano /etc/ldap/ldap.conf
 
-echo "¡COMPLETADO!"	
+echo "¡COMPLETADO!"

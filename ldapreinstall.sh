@@ -45,7 +45,7 @@ objectClass: organizationalUnit
 ou: Groups" > /tmp/add_content.ldif
 
       ldapadd -x -D cn=admin,dc=$dominio,dc=com -W -f /tmp/add_content.ldif
-      clear
+
       echo "COMPLETADO"
     ;;
     n)

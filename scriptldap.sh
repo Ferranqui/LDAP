@@ -87,7 +87,7 @@ ou: Groups" > /tmp/add_content.ldif
 }
 
 function backup {
-  echo "Importar/exportar [i/e]"
+  echo "  *  Importar/exportar [i/e]"
   read resp
   case $resp in
       e)
@@ -98,15 +98,15 @@ function backup {
       ;;
       i)
         #IMPORTAR
-        ls -l | grep .ldif
-        echo "  Escribe el nombre para restaurar (.ldif)."
+        ls | grep .ldif
+        echo "  *  Escribe el nombre para restaurar (.ldif)."
         read rest
         /etc/init.d/slapd stop
         slapadd -c -l $rest
         /etc/init.d/slapd start
       ;;
       *)
-        echo "Respuesta incorrecta."
+        echo "  *  Respuesta incorrecta."
         backup
       ;;
   esac

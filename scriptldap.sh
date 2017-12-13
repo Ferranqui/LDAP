@@ -115,16 +115,18 @@ function backup {
 clear
 
 echo "
-       -------------------------------------
-      | 1- Crear grupos                     |
-      | 2- Crear usuarios                   |
-      | 3- Crear base ( People / Groups )   |
-      | 4- Ver grupos creados               |
-      | 5- Ver usuarios creados             |
-      | 6- Leer fichero de configuración    |
-      | 7- Backup                           |
+                   -- MENÚ --
+      ----------------------------------------
+        1- Crear grupos
+        2- Crear usuarios
+        3- Crear base ( People / Groups )
+        4- Ver grupos creados
+        5- Ver usuarios creados
+        6- Leer fichero de configuración
+        7- Backup
        -------------------------------------
 "
+echo -n "       Opción: "
 read resp
 case $resp in
   1)

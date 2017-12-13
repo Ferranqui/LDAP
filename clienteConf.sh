@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-echo " -- Recuerda escribir la IP y el dominio, el resto a NO."
+echo " -- Recuerda escribir la IP y el dominio, el resto seleccionar NO."
 echo " -- Pulsa INTRO para continuar."
 read
 

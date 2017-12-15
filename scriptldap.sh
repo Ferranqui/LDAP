@@ -104,6 +104,35 @@ function backup {
         /etc/init.d/slapd stop
         slapadd -c -l $rest
         /etc/init.d/slapd start
+
+        #ID usuarios
+        uid=`cat $rest | grep uidNumber | tail -1 | cut -d: -f2 | cut -d" " -f2`
+        let uid=$uid+1
+        echo $uid > /ldap/uidNumber.txt
+
+        #USUARIOS AL FICHERO
+          cantUsuarios=`cat $rest | grep "dn: uid=" | cut -d= -f2 | cut -d, -f1 | wc -l`
+          uid=10000
+          for i in `seq $cantUsuarios`
+          do
+            echo `cat $rest | grep "dn: uid=" | cut -d= -f2 | cut -d, -f1 | head -$i | tail -n+$i`:$uid >> /ldap/usuarios.txt
+            let uid=$uid+1
+          done
+
+
+        #ID grupos
+        gid=`cat $rest | grep gidNumber | tail -1 | cut -d: -f2 | cut -d" " -f2`
+        let gid=$gid+1
+        echo $gid > /ldap/gidNumber.txt
+
+        #GRUPOS AL FICHERO
+          cantGrupos=`cat $rest | grep "dn: cn=" | grep "ou=" | cut -d= -f2 | cut -d, -f1 | wc -l`
+          gid=5000
+          for i in `seq $cantGrupos`
+          do
+            echo `cat $rest | grep "dn: cn=" | grep "ou=" | cut -d= -f2 | cut -d, -f1 | head -$i | tail -n+$i`:$gid >> /ldap/grupos.txt
+            let gid=$gid+1
+          done
       ;;
       *)
         echo "  *  Respuesta incorrecta."

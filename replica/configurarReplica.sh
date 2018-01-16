@@ -10,7 +10,7 @@ function principal {
 
 echo '#!/bin/bash
 
-ping=`ping -c 2 -i 0.2 '$ip' | grep received | cut -d, -f 2 | cut -d' ' -f2`
+ping=`ping -c 2 -i 0.2 '$ip' | grep received | cut -d, -f2 | cut -d" " -f2`
 
 if [[ $ping -ne 0 ]]; then
   #Si segundo servidor está activo
@@ -26,10 +26,17 @@ fi
 
   echo "* * * * * root `pwd`/principal.sh" >> /etc/crontab
 
+  echo "COMPLETADO!"
+
   exit
 }
 
 function secundario {
+  echo "#!/bin/bash
+/etc/init.d/slapd stop
+slapadd -c -l /home/ubuntu/replica.ldif
+/etc/init.d/slapd start
+" > `who`/
   exit
 }
 

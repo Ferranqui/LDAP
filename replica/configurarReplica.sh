@@ -32,11 +32,21 @@ fi
 }
 
 function secundario {
+
+  echo -e "\nUsuario dónde está el backup"
+  read usuario
+
   echo "#!/bin/bash
 /etc/init.d/slapd stop
-slapadd -c -l /home/ubuntu/replica.ldif
+slapadd -c -l /home/$usuario/replica.ldif
 /etc/init.d/slapd start
-" > `who`/
+" > replicaLDAP.sh
+
+  chmod 777 replicaLDAP.sh
+
+  echo "* * * * * root `pwd`/replicaLDAP.sh" >> /etc/crontab
+
+  echo "COMPLETADO!"
   exit
 }
 

@@ -20,11 +20,11 @@ else
   #Si segundo servidor NO está activo
   exit
 fi
-' > principal.sh
+' > /ldap/repPrincipal.sh
 
-  chmod 777 principal.sh
+  chmod 777 /ldap/repPrincipal.sh
 
-  echo "* * * * * root `pwd`/principal.sh" >> /etc/crontab
+  echo "* * * * * root /ldap/repPrincipal.sh" >> /etc/crontab
 
   echo "COMPLETADO!"
 
@@ -35,28 +35,29 @@ function secundario {
 
   echo -e "\nUsuario dónde está el backup"
   read usuario
-
   echo "#!/bin/bash
 /etc/init.d/slapd stop
 slapadd -c -l /home/$usuario/replica.ldif
 /etc/init.d/slapd start
-" > replicaLDAP.sh
+" > /ldap/repSec.sh
 
-  chmod 777 replicaLDAP.sh
+  chmod 777 /ldap/repSec.sh
 
-  echo "* * * * * root `pwd`/replicaLDAP.sh" >> /etc/crontab
+  echo "* * * * * root /ldap/repSec.sh" >> /etc/crontab
 
   echo "COMPLETADO!"
   exit
 }
 
 clear
-
+echo "                                 "
+echo " Recuerda tener instalado el sshpass"
 echo "    -----------------------------"
 echo "       1.- Servidor principal    "
 echo "       2.- Servidor secundario   "
 echo "    -----------------------------"
 
+echo -n "   Opción: "
 read menu
 
 case $menu in

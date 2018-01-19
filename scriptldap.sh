@@ -153,6 +153,7 @@ echo "
         5- Ver usuarios creados
         6- Leer fichero de configuración
         7- Backup
+        8- Replica
        -------------------------------------
 "
 echo -n "       Opción: "
@@ -178,6 +179,9 @@ case $resp in
   ;;
   7)
     backup
+  ;;
+  8)
+    ./replica/menu_replica.sh
   ;;
   *)
     exit
